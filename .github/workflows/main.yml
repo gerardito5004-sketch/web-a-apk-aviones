@@ -1,0 +1,15 @@
+name: Build APK
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build APK
+        uses: pavi2410/Web2App@main
+        with:
+          name: "AvionesApp"
+          # Al no poner URL, el sistema busca el index.html en la raíz
